@@ -1,0 +1,5 @@
+config SHIELD_zmk100_LEFT
+    def_bool $(shields_list_contains,zmk100_left)
+
+config SHIELD_zmk100_RIGHT
+    def_bool $(shields_list_contains,zmk100_right)
