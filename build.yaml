@@ -20,6 +20,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: bfo9000_left
+    shield: zmk100_left
   - board: nice_nano_v2
-    shield: bfo9000_right
+    shield: zmk100_right
