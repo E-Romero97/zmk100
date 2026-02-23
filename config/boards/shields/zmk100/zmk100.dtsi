@@ -1,0 +1,47 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix-transform = &default_transform;
+    };
+    
+    default_transform: keymap_transform0 {
+        compatible = "zmk,matrix-transform";
+        columns = <20>;
+        rows = <6>;
+        map = <
+        //  LKey 1 |LKey 2 |LKey 3 |LKey 4 |LKey 5 |LKey 6 |LKey 7 |LKey 8              RKey 1 |RKey 2 |RKey 3 |RKey 4 |RKey 5 |RKey 6 |RKey 7 |RKey 8 |RKey 9 |RKey 10 |RKey 11 |RKey 12
+            RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5) RC(0,6) RC(0,7)             RC(0,8)  RC(0,9)  RC(0,10) RC(0,11) RC(0,12) RC(0,13) RC(0,14) RC(0,15) RC(0,16) RC(0,17) RC(0,18) RC(0,19)
+        //  LKey 9 |LKey 10 |LKey 11 |LKey 12 |LKey 13 |LKey 14 |LKey 15 |LKey 16       RKey 13 |RKey 14 |RKey 15 |RKey 16 |RKey 17 |RKey 18 |RKey 19 |RKey 20 |RKey 21 |RKey 22 |RKey 23 |RKey 24
+            RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5) RC(1,6) RC(1,7)             RC(1,8)  RC(1,9)  RC(1,10) RC(1,11) RC(1,12) RC(1,13) RC(1,14) RC(1,15) RC(1,16) RC(1,17) RC(1,18) RC(1,19)
+        //  LKey 17 |LKey 18 |LKey 19 |LKey 20 |LKey 21 |LKey 22 |LKey 23 |LKey 24      RKey 25 |RKey 26 |RKey 27 |RKey 28 |RKey 29 |RKey 30 |RKey 31 |RKey 32 |RKey 33 |RKey 34 |RKey 35 |RKey 36
+            RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(2,6) RC(2,7)             RC(2,8)  RC(2,9)  RC(2,10) RC(2,11) RC(2,12) RC(2,13) RC(2,14) RC(2,15) RC(2,16) RC(2,17) RC(2,18) RC(2,19)
+        //  LKey 25 |LKey 26 |LKey 27 |LKey 28 |LKey 29 |LKey 30 |LKey 31 |LKey 32      RKey 37 |RKey 38 |RKey 39 |RKey 40 |RKey 41 |RKey 42 |RKey 43 |RKey 44 |RKey 45 |RKey 46 |RKey 47 |RKey 48
+            RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6) RC(3,7)             RC(3,8)  RC(3,9)  RC(3,10) RC(3,11) RC(3,12) RC(3,13) RC(3,14) RC(3,15) RC(3,16) RC(3,17) RC(3,18) RC(3,19)
+        //  LKey 33 |LKey 34 |LKey 35 |LKey 36 |LKey 37 |LKey 38 |LKey 39 |LKey 40      RKey 49 |RKey 50 |RKey 51 |RKey 52 |RKey 53 |RKey 54 |RKey 55 |RKey 56 |RKey 57 |RKey 58 |RKey 59 |RKey 60
+            RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5) RC(4,6) RC(4,7)             RC(4,8)  RC(4,9)  RC(4,10) RC(4,11) RC(4,12) RC(4,13) RC(4,14) RC(4,15) RC(4,16) RC(4,17) RC(4,18) RC(4,19)
+        //  LKey 41 |LKey 42 |LKey 43 |LKey 44 |LKey 45 |LKey 46 |LKey 47 |LKey 48      RKey 61 |RKey 62 |RKey 63 |RKey 64 |RKey 65 |RKey 66 |RKey 67 |RKey 68 |RKey 69 |RKey 70 |RKey 71 |RKey 72
+            RC(5,0) RC(5,1) RC(5,2) RC(5,3) RC(5,4) RC(5,5) RC(5,6) RC(5,7)             RC(5,8)  RC(5,9)  RC(5,10) RC(5,11) RC(5,12) RC(5,13) RC(5,14) RC(5,15) RC(5,16) RC(5,17) RC(5,18) RC(5,19)
+        >;
+    };
+
+
+
+    kscan0: kscan0 {
+    compatible = "zmk,kscan-gpio-matrix";
+    diode-direction = "col2row";
+    wakeup-source;
+
+    row-gpios =
+        <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio0 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    ;
+};
+};
+
+
